@@ -5,6 +5,7 @@ services:
     environment:
       - "MYSQL_ROOT_PASSWORD=root"
     volumes:
+      - ./student_record.sql:/student_record.sql
       - ./data/mysql-master:/var/lib/mysql/
       - ./config/mysql-master:/etc/mysql/conf.d/
   mysqlslave:
